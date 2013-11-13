@@ -10,3 +10,25 @@ we could have a special directory like lib for msk files. maybe that can be conf
 
 the action should define conditions like http verb etc.
 we can have a command for loading all the action files and generating a routes table. This might be slow bug better a development command be slow than the app.
+
+
+the .rb files should just be code that we load. there is no class defining or anything allowed its just the action definition and controlls. if you need classes or whatever thats what lib is for.
+
+when the mtimes change in development we can just re-define that actions object with the new source of the code. an action is litterally the inside of a method. when the files changes we litterlly just redefine the method with the source of the files.
+
+fuck maybe in development all actions just eval the file every time. lolz
+
+
+each .rb file is actually a class definition. that allows for performance, route and action definition with an easy reload strategey in development.
+
+
+
+this sounds like an amazing framework
+
+a huge motivation of this framework was to get the work of serializing objects and handling http requests out of your head so you can focus on the application.
+
+
+this framework should use event machine and support sockets and streaming out of the box.
+
+
+
